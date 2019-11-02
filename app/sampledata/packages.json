@@ -1,0 +1,34 @@
+{
+  "packages": [
+    {
+      "image":"https://vestindoaalma.com.br/wp-content/uploads/2018/03/sao_paulo.jpg",
+      "local": "São Paulo",
+      "days": "2 dias",
+      "price": "R$ 243,99"
+    },
+    {
+      "image":"https://vestindoaalma.com.br/wp-content/uploads/2018/03/sao_paulo.jpg",
+      "local": "Belo Horizonte",
+      "days": "3 dias",
+      "price": "R$ 431,99"
+    },
+    {
+      "image":"https://vestindoaalma.com.br/wp-content/uploads/2018/03/sao_paulo.jpg",
+      "local": "Recife",
+      "days": "7 dias",
+      "price": "R$ 5.903,99"
+    },
+    {
+      "image":"https://vestindoaalma.com.br/wp-content/uploads/2018/03/sao_paulo.jpg",
+      "local": "Rio de Janeiro",
+      "days": "2 dias",
+      "price": "R$ 187,99"
+    },
+    {
+      "image":"https://vestindoaalma.com.br/wp-content/uploads/2018/03/sao_paulo.jpg",
+      "local": "Natal",
+      "days": "7 dias",
+      "price": "R$ 8.098,99"
+    }
+  ]
+}
