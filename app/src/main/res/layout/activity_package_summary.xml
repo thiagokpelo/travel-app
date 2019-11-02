@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/package_summary_banner"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/package_summary_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/package_summary_banner"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/package_summary_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/package_summary_local"
+        app:layout_constraintTop_toBottomOf="@+id/package_summary_local"
+        tools:text="2 dias" />
+
+    <TextView
+        android:id="@+id/package_summary_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/package_summary_days"
+        app:layout_constraintTop_toBottomOf="@+id/package_summary_days"
+        tools:text="08/12 - 10/12 de 2019" />
+
+    <TextView
+        android:id="@+id/package_summary_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/package_summary_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="R$ 239,99" />
+
+    <TextView
+        android:id="@+id/package_summary_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Preço final:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/package_summary_price"
+        app:layout_constraintEnd_toEndOf="@+id/package_summary_price" />
+
+    <Button
+        android:id="@+id/package_summary_call_to_action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_rounded_orange"
+        android:text="Realizar pagamento"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
