@@ -4,4 +4,6 @@
     <string name="subtitle">Brasil</string>
     <string name="background_content_description">background</string>
     <string name="banner_content_description">Banner dos pacotes</string>
+    <string name="price_label">Preço final:</string>
+    <string name="label_button">Realizar pagamento</string>
 </resources>
