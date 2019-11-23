@@ -1,15 +1,14 @@
 package dev.thiagokpelo.viagens.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import dev.thiagokpelo.viagens.R;
 import dev.thiagokpelo.viagens.model.Package;
@@ -21,6 +20,7 @@ public class PackageSummaryActivity extends AppCompatActivity {
 
     public static final String APPBAR_TITLE = "Resumo do pacote";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +28,33 @@ public class PackageSummaryActivity extends AppCompatActivity {
 
         setTitle(APPBAR_TITLE);
 
-        Package packageSP = new Package("São Paulo", "sao_paulo_sp", 2, new BigDecimal("243.99"));
+        populatePackageSelected();
+    }
 
-        populateAllProperties(packageSP);
+    private void populatePackageSelected() {
+        Intent intent = getIntent();
+
+        if (intent.hasExtra(PackageConstants.PACKAGE_KEY)) {
+            final Package packageSelected = (Package) intent.getSerializableExtra(PackageConstants.PACKAGE_KEY);
+            populateAllProperties(packageSelected);
+            buttonConfig(packageSelected);
+        }
+    }
+
+    private void buttonConfig(final Package packageSelected) {
+        Button button = findViewById(R.id.package_summary_call_to_action);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToPayment(packageSelected);
+            }
+        });
+    }
+
+    private void goToPayment(Package item) {
+        Intent intent = new Intent(PackageSummaryActivity.this, PaymentActivity.class);
+        intent.putExtra(PackageConstants.PACKAGE_KEY, item);
+        startActivity(intent);
     }
 
     private void populateAllProperties(Package item) {

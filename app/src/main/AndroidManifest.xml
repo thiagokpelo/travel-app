@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.PackageSummaryActivity"></activity>
+        <activity android:name=".ui.activity.SummaryPaymentActivity"></activity>
+        <activity android:name=".ui.activity.PaymentActivity" />
+        <activity android:name=".ui.activity.PackageSummaryActivity" />
         <activity android:name=".ui.activity.PackageListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

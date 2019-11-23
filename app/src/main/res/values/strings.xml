@@ -6,4 +6,18 @@
     <string name="banner_content_description">Banner dos pacotes</string>
     <string name="price_label">Preço final:</string>
     <string name="label_button">Realizar pagamento</string>
+    <string name="mask_card_name">abcdefghijklmnopqrstuvwyzçABCDEFGIJKLMNOPQRSTUVXWYZÇ\u0020</string>
+    <string name="payment_title">Digite as informações do cartão de crédito que você deseja para o pagamento</string>
+    <string name="card_number_hint">Número do cartão</string>
+    <string name="card_cvc_hint">CVC</string>
+    <string name="payment_button_label">Finalizar compra</string>
+    <string name="card_name_hint">Nome no cartão</string>
+    <string name="card_year_hint">AA</string>
+    <string name="card_month_hint">MM</string>
+    <string name="payment_price_label">Valor da compra:</string>
+    <string name="compra_realizada_com_sucesso">Compra realizada com sucesso :)</string>
+    <string name="parabens">Parabéns</string>
+    <string name="confira_o_resumo_da_compra">Confira o resumo da compra</string>
+    <string name="background_title">background_title</string>
+    <string name="imagem_do_pacote">imagem do pacote</string>
 </resources>

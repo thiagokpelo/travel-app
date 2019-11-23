@@ -2,6 +2,8 @@ package dev.thiagokpelo.viagens.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,14 +25,23 @@ public class PackageListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_package_list);
         setTitle(APPBAR_TITLE);
         listConfig();
-
-        Intent intent = new Intent(this, PackageSummaryActivity.class);
-        startActivity(intent);
     }
 
     private void listConfig() {
         ListView packagesList = findViewById(R.id.listview);
-        List<Package> packages = new PackageDAO().list();
+        final List<Package> packages = new PackageDAO().list();
         packagesList.setAdapter(new PackageListAdapter(packages, this));
+        packagesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                goToPackageSummary(packages.get(position));
+            }
+        });
+    }
+
+    private void goToPackageSummary(Package item) {
+        Intent intent = new Intent(PackageListActivity.this, PackageSummaryActivity.class);
+        intent.putExtra(PackageConstants.PACKAGE_KEY, item);
+        startActivity(intent);
     }
 }
